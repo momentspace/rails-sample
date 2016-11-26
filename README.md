@@ -1,24 +1,11 @@
-# README
+# slim-railsのサンプル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## erbからslimに変換する
 
-Things you may want to cover:
+```
+for i in app/views/**/*.erb; do bundle exec erb2slim $i ${i%erb}slim && rm $i; done
+  remove app/views/layouts/application.html.erb? y
+  remove app/views/layouts/mailer.html.erb? y
+  remove app/views/layouts/mailer.text.erb? y
+```
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
