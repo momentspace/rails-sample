@@ -17,3 +17,18 @@ $ for i in app/views/**/*.erb; do bundle exec erb2slim $i ${i%erb}slim && rm $i;
 ```
 $ rails g bootstrap:install
 ```
+
+## therubyracerを有効にする
+--- Gemfile
+gem 'therubyracer'
+
+$ bundle install
+
+## bootstrapを反映
+
+```
+$ rails g bootstrap:install less
+$ rails g bootstrap:layout application fluid
+$ rails g bootstrap:themed posts -f
+```
+
